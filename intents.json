@@ -1,0 +1,609 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hii",
+          "Hello",
+          "Hai",
+          "Hey",
+          "hi"
+        ],
+        "responses": [
+          "Hello! Welcome to Crescent Education. How can I assist you today?",
+          "Hi there!  Welcome to Crescent Education. How can I assist you today?"
+        ]
+      },
+      {
+        "tag": "university,college_info",
+        "patterns": [
+          "Tell me about university",
+          "university information",
+          "College information",
+          "College details",
+          "About university",
+          "About college",
+          "university details"
+        ],
+        "responses": [
+          "Nestled in the serene greenery of Tambaram, Chennai, B.S. Abdur Rahman Crescent Institute of Science and Technology is a premier institution dedicated to academic excellence, since 1984.  Through our long history of 40+ years of excellence, the Institution has offered access to a wide range of academic opportunities. With 57 programmes, grouped under 12 different Schools, and Ph.D. in all the disciplines, this institution is a rising stalwart in higher education with promising Quality, Security and Placement. We welcome students from all countries and our educational programmes are designed to equip the learners with knowledge that helps them to achieve what they want to be and go where they want to go in the ladder of success.This institution is an intellectual destination that challenges conventional thinking and stimulates passion to redefine learning. The distinctive teaching at this institution makes the students and scholars compete with themselves and each other. Apart from providing top-notch education, our green campus and well-planned student-life are solely dedicated to making students utilize the ambiance to the fullest. Through our wide array of educational programmes and unique clubs to foster student development activities, we provide opportunities and experiences that build a community that helps you grow personally and professionally, and create a place that you can call home now and throughout your life."
+        ]
+      },
+      {
+        "tag": "founder",
+        "patterns": [
+          "Who is the Founder of the Institution?",
+          "Who is the Founder of the crescent Institution?",
+          "who found crescent?",
+          "crescent university founded by?"
+        ],
+        "responses": [
+          "Alhaj Dr. B.S.Abdur Rahman. (An uncommon man, of deep conviction and perseverance; his vision runs Crescent today for the benefit of the students, teachers, staff members, alumni and the society.) "
+        ]
+      },
+      {
+        "tag": "president",
+        "patterns": [
+          "Who is the president of university?",
+          "Who is the president of crescent university?",
+          "Who is the president of B.S.Abdur Rahman university",
+          "Who is the president of our college?",
+          "Who is the president of college?"
+        ],
+        "responses": [
+          "BSA ARIF BUHARY RAHMAN. (Is the President of B.S.Abdur Rahman university) "
+        ]
+      },
+      {
+        "tag": "chancellor",
+        "patterns": [
+          "Who is the chancellor of college?",
+          "Who is the chancellor of crescent?",
+          "chancellor who?",
+          "who is the chancellor of crescent "
+        ],
+        "responses": [
+          "Mrs.Qurrath Jameela ((Is the chancellor of B.S.Abdur Rahman university)"
+        ]
+      },
+      {
+        "tag": "vice_chancellor",
+        "patterns": [
+          "Who is the vice chancellor of college?",
+          "Who is the vice chancellor of crescent?",
+          "Who is the vice chancellor of university?"
+        ],
+        "responses": [
+          "Prof. Dr. T. Murugesan. Is the vice chancellor of B.S.Abdur Rahman university (Prof. Dr. Thanabalan Murugesan received his Ph.D in Chemical Engineering from Anna University, Chennai, India, and has been involved in teaching, research and industrial consultancy in Chemical Engineering and allied fields during the past 33 years. After serving as a Scientist at CLRI, Adyar for 5 years, he served as Reader /Professor at ACTech, Anna University for 14 years. Prof. Murugesan joined Universiti Teknologi PETRONAS Malaysia, where served as Professor of Chemical Engineering for the last 15 years.)"
+        ]
+      },
+      {
+        "tag": " pro_chancellor",
+        "patterns": [
+          "Who is the pro chancellor of college?",
+          "Who is the pro chancellor of university?",
+          "Who is the pro chancellor of crescent?",
+          "who is pro chancellor?"
+        ],
+        "responses": [
+          "Dr. N. Thajuddin. Is pro chancellor of B.S.Abdur Rahman university"
+        ]
+      },
+      {
+        "tag": "registrar",
+        "patterns": [
+          "Who is the registrar of college?",
+          "Who is the registrar of crescent?",
+          "Who is the registrar?",
+          "registrar of crescent"
+        ],
+        "responses": [
+          "Dr.N.Raja Hussain. Is registrar of B.S.Abdur Rahman university"
+        ]
+      },
+      {
+        "tag": "departments,courses",
+        "patterns": [
+          "How many departments are there in your college?",
+          "How many departments are there?",
+          "What all departments do you have?",
+          "How many courses or departments are in the college?",
+          "What departments are available here?",
+          "how many courses are available here ? "
+        ],
+        "responses": [
+          "B.S. Abdur Rahman Crescent Institute of Science and Technology offers various departments across multiple disciplines, including Mechanical Engineering, Polymer Engineering, Aerospace Engineering, Automobile Engineering, Civil Engineering, Electrical and Electronics Engineering (EEE), Electronics and Communication Engineering (ECE), Electronics and Instrumentation Engineering (EIE), Computer Science and Engineering (CSE), Information Technology (IT), Computer Applications, Mathematics and Actuarial Science, Management Studies, Physics, Chemistry, Life Sciences, Pharmacy, Law, Architecture, English, Commerce, Public Policy, and Arabic and Islamic Studies."
+        ]
+      },
+      {
+        "tag": "Mechanical Engineering_HOD,Head_of_the_Department",
+        "patterns": [
+          "Who is the HOD of Mechanical Engineering?",
+          "Who is the Head of the Department of Mechanical Engineering?",
+          "HOD of Mechanical Engineering?",
+          "Head of the Department of Mechanical Engineering?"
+        ],
+        "responses": [
+          "Dr. M. Mohamed Ibrahim: Professor and Head of the Department of Mechanical Engineering (hodmech@crescent.education)"
+        ]
+      },
+      {
+        "tag": "Aerospace Engineering_HOD,Head_of_the_Department",
+        "patterns": [
+          "Who is the HOD of Aerospace Engineering?",
+          "Who is the Head of the Department of Aerospace Engineering?",
+          "HOD of Aerospace Engineering?",
+          "Head of the Department of Aerospace Engineering?"
+        ],
+        "responses": [
+          "Dr. M.Magesh: Professor and Head of the Department of Aerospace Engineering (hodaero@crescent.education)"
+        ]
+      },
+      {
+        "tag": "Polymer Engineering_HOD,Head_of_the_Department",
+        "patterns": [
+          "Who is the HOD of Polymer Engineering?",
+          "Who is the Head of the Department of Polymer Engineering?",
+          "HOD of Polymer Engineering?",
+          "Head of the Department of Polymer Engineering?"
+        ],
+        "responses": [
+          "Dr. S.Shamshath Begum: Professor and Head of the Department of Polymer Engineering (hodpt@crescent.education)"
+        ]
+      },
+      {
+        "tag": "Automobile Engineering_HOD,Head_of_the_Department",
+        "patterns": [
+          "Who is the HOD of Automobile Engineering?",
+          "Who is the Head of the Department of Automobile Engineering?",
+          "HOD of Automobile Engineering?",
+          "Head of the Department of Automobile Engineering?"
+        ],
+        "responses": [
+          "Dr. P.D. Jeyakumar: Professor and Head of the Department of Automobile Engineering (hodauto@crescent.education)"
+        ]
+      },
+      {
+        "tag": "Civil Engineering_HOD,Head_of_the_Department",
+        "patterns": [
+          "Who is the HOD of Civil Engineering?",
+          "Who is the Head of the Department of Civil Engineering?",
+          "HOD of Civil Engineering?",
+          "Head of the Department of Civil Engineering?"
+        ],
+        "responses": [
+          "Dr. M.S. Haji Sheik Mohammed: Department of Civil Engineering (dean.infrastructure@crescent.education)"
+        ]
+      },
+      {
+        "tag": "EEE_HOD,Head_of_the_Department",
+        "patterns": [
+          "Who is the HOD of EEE?",
+          "Who is the Head of the Department of EEE?",
+          "HOD of EEE?",
+          "Head of the Department of EEE?"
+        ],
+        "responses": [
+          "Dr. S.Jennathu Beevi: Professor and Head of the Department of EEE (hodauto@crescent.education)"
+        ]
+      },
+      {
+        "tag": "ECE_HOD,Head_of_the_Department",
+        "patterns": [
+          "Who is the HOD of ECE?",
+          "Who is the Head of the Department of ECE?",
+          "HOD of ECE?",
+          "Head of the Department of ECE?"
+        ],
+        "responses": [
+          "Dr. C. Tharini: Dean and Head of the Department of ECE (dean_secs@crescent.education)"
+        ]
+      },
+      {
+        "tag": "EIE_HOD,Head_of_the_Department",
+        "patterns": [
+          "Who is the HOD of EIE?",
+          "Who is the Head of the Department of EIE?",
+          "HOD of EIE?",
+          "Head of the Department of EIE?"
+        ],
+        "responses": [
+          "Dr. D.Najumnissa Jamal: Professor and Head of the Department of EIE (hodeie@crescent.education)"
+        ]
+      },
+      {
+        "tag": "CSE_HOD,Head_of_the_Department",
+        "patterns": [
+          "Who is the HOD of CSE?",
+          "Who is the Head of the Department of CSE?",
+          "HOD of CSE?",
+          "Head of the Department of CSE?"
+        ],
+        "responses": [
+          "Dr. Aisha Banu W: Professor and Head of the Department of CSE (hodcse@crescent.education)"
+        ]
+      },
+        {
+        "tag": "IT,Information_Technology,HOD,Head_of_the_Department",
+        "patterns": [
+            "Who is the HOD of IT?",
+            "Who is the Head of the Department of IT?",
+            "HOD of Information Technology?",
+            "Head of the Department of IT?"
+        ],
+        "responses": [
+            "Dr. N.Prakash: Professor and Head of the Department of Information_Technology (hodit@crescent.education)"
+        ]
+        },
+        {
+        "tag": "CA_computer_application_HOD,Head_of_the_Department",
+        "patterns": [
+            "Who is the HOD of computer application?",
+            "Who is the Head of the Department of CA?",
+            "HOD of computer application?",
+            "Head of the Department of CA?"
+        ],
+        "responses": [
+            "Dr. M.Syed Masood: Associate Professor and Head of the Department of computer application (hodca@crescent.education)"
+        ]
+        },
+        {
+        "tag": "CA_computer_applicatio_Faculty,teaching_Staff,Professors",
+        "patterns": [
+            "List the staff of the Computer Applications",
+            "Who are the faculty members in the Computer Applications?",
+            "can you give me the names of the professors in Computer Applications?",
+            "Tell me the teaching staff of the Computer Applications .",
+            "show me list of staff in computer application"
+        ],
+        "responses": [
+            "Dr. M. Syed Masood – Associate Professor & Head, Dr. S. Pakkir Mohideen – Professor, Dr. A. Abdul Azeez Khan – Associate Professor, Dr. G. Shree Devi – Associate Professor, Dr. P. Amudhavalli – Assistant Professor (Senior Grade), Dr. V. Shenbaga Priya – Assistant Professor (Senior Grade), Dr. R. Sonia – Assistant Professor (Senior Grade), Dr. Mohamed Divan Masood M – Assistant Professor, Dr. Peer Mohamed Ziyath S – Assistant Professor, Dr. R. Sabin Begum – Assistant Professor, Dr. C. Senthil Selvi – Assistant Professor, Dr. R. Shanthi – Assistant Professor, G. David Raj – Assistant Professor, Dr. Jeevitha Sivasamy – Assistant Professor, Amsavalli S – Assistant Professor, Mrs. G. Gomathi – Assistant Professor, Dr. Jose Reena K – Assistant Professor, Dr. A. Jaya – Professor & Director (CDOE), Dr. S. Shahar Banu – Associate Professor, Dr. K. Javubar Sathick – Associate Professor, Dr. P. Padmavathy – Assistant Professor (Senior Grade), T. Pandiyavathi – Assistant Professor (Senior Grade), Dr. A. K. Ashfauk Ahamed – Assistant Professor (Senior Grade), V. M. Niaz Ahamed – Assistant Professor & Deputy Warden (Discipline), Sabaria S – Assistant Professor, Dr. A. Haja Alaudeen – Assistant Professor, Dr. Deepika – Assistant Professor, Dr. I. Parvin Begum – Assistant Professor, Dr. E. Manogar – Assistant Professor, Dr. S. Kalaivani – Assistant Professor, Mr. Mohammed Jalaluddin – Assistant Professor, Dr. N. Parvin – Assistant Professor, Dr. M. Varusai Mohamed – Assistant Professor."
+        ]
+        },
+        {
+        "tag": "MAC,mathematics&actuarial_science_HOD,Head_of_the_Department",
+        "patterns": [
+            "Who is the HOD of mathematics&actuarial_science?",
+            "Who is the Head of the Department of MAC?",
+            "HOD of mathematics_actuarial_science?",
+            "HOD of MAC?",
+            "Head of the Department of mathematics&actuarial_science?"
+        ],
+        "responses": [
+            "Dr. Sindhu J.Kumaar: Professor and Head of the Department of mathematics&actuarial_science (hodmaths@crescent.education)"
+        ]
+        },
+        {
+        "tag": "MBA,Mnagement_studies_HOD,Head_of_the_Department",
+        "patterns": [
+            "Who is the HOD of Mnagement_studies?",
+            "Who is the Head of the Department of MBA?",
+            "HOD of Mnagement_studies?",
+            "HOD of MBA?",
+            "Head of the Department of Mnagement_studies?"
+        ],
+        "responses": [
+            "Dr. S.K.G.Ganesh: Professor and Head of the Department of mathematics&actuarial_science (hodms@crescent.education)"
+        ]
+        },
+        {
+        "tag": "physics_HOD,Head_of_the_Department",
+        "patterns": [
+            "Who is the HOD of physics?",
+            "Who is the Head of the Department of physics?",
+            "HOD of physics?",
+            "Head of the Department of physics?",
+            "HOD of physics?"
+        ],
+        "responses": [
+            "Dr. G.V.Vijayaraghavan: Professor and Head of the Department of physics (hodphysics@crescent.education)"
+        ]
+        },
+        {
+          "tag": "chemistry_HOD,Head_of_the_Department",
+          "patterns": [
+              "Who is the HOD of chemistry?",
+              "Who is the Head of the Department of chemistry?",
+              "HOD of chemistry?",
+              "Head of the Department of chemistry?",
+              "HOD of chemistry?"
+          ],
+          "responses": [
+              "Dr. N.Hajara Beevi: Professor and Head of the Department of chemistry (hodchem@crescent.education)"
+        ]
+        },
+        {
+        "tag": "life_science_HOD,Head_of_the_Department",
+          "patterns": [
+              "Who is the HOD of life_science?",
+              "Who is the Head of the Department of life_science?",
+              "HOD of life_science?",
+              "Head of the Department of life_science?",
+              "HOD of life_science?"
+          ],
+          "responses": [
+              "Dr. S.Hemalatha: Dean and Head of the Department of life_science (dean.sls@crescent.education)"
+        ]
+        },
+        {
+        "tag": "pharmacy_HOD,Head_of_the_Department",
+          "patterns": [
+              "Who is the HOD of pharmacy?",
+              "Who is the Head of the Department of pharmacy?",
+              "HOD of pharmacy?",
+              "Head of the Department of pharmacy?",
+              "HOD of pharmacy?"
+          ],
+          "responses": [
+              "Dr. M. Vijaya Vara Prasad: Dean and Head of the Department of pharmacy (deanpharmacy@crescent.education)"
+        ]
+        },
+        {
+          "tag": "LAW_HOD,Head_of_the_Department",
+          "patterns": [
+              "Who is the HOD of LAW?",
+              "Who is the Head of the Department of LAW?",
+              "HOD of LAW?",
+              "Head of the Department of LAW?",
+              "HOD of LAW?"
+          ],
+          "responses": [
+              "Dr. C.Chockalingam: Dean and Head of the Department of pharmacy (deanlaw@crescent.education)"
+        ]
+        },
+        {
+          "tag": "English_HOD,Head_of_the_Department",
+          "patterns": [
+              "Who is the HOD of English?",
+              "Who is the Head of the Department of English?",
+              "HOD of English?",
+              "Head of the Department of English?",
+              "HOD of English?"
+          ],
+          "responses": [
+              "Dr. P. Rathna: Professor and Head of the Department of pharmacy (hodenglish@crescent.education)"
+        ]
+        },
+        {
+       "tag": "commerce_HOD,Head_of_the_Department",
+          "patterns": [
+              "Who is the HOD of commerce?",
+              "Who is the Head of the Department of commerce?",
+              "HOD of commerce?",
+              "Head of the Department of commerce?",
+              "HOD of commerce?"
+          ],
+          "responses": [
+              "Dr. K.Soundarapandiyan: Professor and Head of the Department of pharmacy (hodcommerce@crescent.education)"
+        ]
+        },
+        {
+       "tag": "public_policy_HOD,Head_of_the_Department",
+          "patterns": [
+              "Who is the HOD of public_policy?",
+              "Who is the Head of the Department of public_policy?",
+              "HOD of public_policy?",
+              "Head of the Department of public_policy?",
+              "HOD of public_policy?"
+          ],
+          "responses": [
+              "Dr. R.Radhai: Assistant Professor and Head of the Department of pharmacy (hodpublicpolicy@crescent.education)"
+        ]
+        },
+        {
+        "tag": "arabic_and_islamic_studies_HOD,Head_of_the_Department",
+          "patterns": [
+              "Who is the HOD of arabic_and_islamic_studies?",
+              "Who is the Head of the Department of arabic_and_islamic_studies?",
+              "HOD of arabic_and_islamic_studies?",
+              "Head of the Department of arabic_and_islamic_studies?",
+              "HOD of arabic_and_islamic_studies?"
+          ],
+          "responses": [
+              "Dr. A. Abdul Hai Hasani Nadwi: Dean and Head of the Department of pharmacy (dean-sis@crescent.education)"
+        ]
+        },
+        {
+        "tag": "fees_structure_mechanical_engineering",
+          "patterns": [
+              "What is the fee structure for Mechanical Engineering?",
+              "How much does Mechanical Engineering cost per year?",
+              "Fees for Mechanical Engineering?",
+              "Tell me the Mechanical Engineering course fees."
+          ],
+          "responses": [
+              "The fee structure for Mechanical Engineering is approximately ₹1,50,000 per year. For more details, visit the official website or contact admissions at admissions@crescent.education."
+        ]
+        },
+        {
+        "tag": "fees_structure_polymer_engineering",
+          "patterns": [
+              "What is the fee structure for Polymer Engineering?",
+              "How much does Polymer Engineering cost per year?",
+              "Fees for Polymer Engineering?",
+              "Tell me the Polymer Engineering course fees."
+          ],
+          "responses": [
+              "The fee structure for Polymer Engineering is approximately ₹1,40,000 per year. For more details, visit the official website or contact admissions at admissions@crescent.education."
+        ]
+        },
+        {
+        "tag": "fees_structure_aerospace_engineering",
+          "patterns": [
+              "What is the fee structure for Aerospace Engineering?",
+              "How much does Aerospace Engineering cost per year?",
+              "Fees for Aerospace Engineering?",
+              "Tell me the Aerospace Engineering course fees."
+          ],
+          "responses": [
+              "The fee structure for Aerospace Engineering is approximately ₹1,60,000 per year. For more details, visit the official website or contact admissions at admissions@crescent.education."
+        ]
+        },
+        {
+        "tag": "fees_structure_automobile_engineering",
+          "patterns": [
+              "What is the fee structure for Automobile Engineering?",
+              "How much does Automobile Engineering cost per year?",
+              "Fees for Automobile Engineering?",
+              "Tell me the Automobile Engineering course fees."
+          ],
+          "responses": [
+              "The fee structure for Automobile Engineering is approximately ₹1,45,000 per year. For more details, visit the official website or contact admissions at admissions@crescent.education."
+        ]
+        },
+        {
+        "tag": "fees_structure_civil_engineering",
+          "patterns": [
+              "What is the fee structure for Civil Engineering?",
+              "How much does Civil Engineering cost per year?",
+              "Fees for Civil Engineering?",
+              "Tell me the Civil Engineering course fees."
+          ],
+          "responses": [
+              "The fee structure for Civil Engineering is approximately ₹1,35,000 per year. For more details, visit the official website or contact admissions at admissions@crescent.education."
+        ]
+        },
+        {
+        "tag": "fees_structure_electrical_and_electronics_engineering",
+          "patterns": [
+              "What is the fee structure for Electrical and Electronics Engineering?",
+              "How much does Electrical and Electronics Engineering cost per year?",
+              "Fees for Electrical and Electronics Engineering?",
+              "Tell me the EEE course fees."
+          ],
+          "responses": [
+              "The fee structure for Electrical and Electronics Engineering is approximately ₹1,55,000 per year. For more details, visit the official website or contact admissions at admissions@crescent.education."
+        ]
+        },
+        {
+            "tag": "fees_structure_electronics_and_communication_engineering",
+          "patterns": [
+              "What is the fee structure for Electronics and Communication Engineering?",
+              "How much does Electrical and Electronics and Communication Engineering cost per year?",
+              "Fees for Electrical and Electronics and Communication Engineering?",
+              "Tell me the ECE course fees."
+          ],
+          "responses": [
+              "The fee structure for Electronics and Communication Engineering is approximately ₹1,50,000 per year. For more details, visit the official website or contact admissions at admissions@crescent.education."
+            ]
+        },
+        {
+            "tag": "fees_structure_electronics_and_instrumentation_engineering",
+          "patterns": [
+              "What is the fee structure for  Electronics and Instrumentation Engineering?",
+              "How much does Electrical and  Electronics and Instrumentation Engineering cost per year?",
+              "Fees for  Electronics and Instrumentation Engineering?",
+              "Tell me the EIE course fees."
+          ],
+          "responses": [
+              "The fee structure for Electronics and Instrumentation Engineering is approximately ₹1,45,000 per year. For more details, visit the official website or contact admissions at admissions@crescent.education."
+            ]
+        },
+        {
+            "tag": "fees_structure_computer_science_and_engineering",
+          "patterns": [
+              "What is the fee structure for computer_science_and_engineering?",
+              "How much does Electrical and computer_science_and_engineering cost per year?",
+              "Fees for computer_science_and_engineering?",
+              "Tell me the CSE course fees."
+          ],
+          "responses": [
+              "The fee structure for Computer Science and Engineering is approximately ₹1,70,000 per year. For more details, visit the official website or contact admissions at admissions@crescent.education."
+            ]
+        },
+        {
+            "tag": "fees_structure_computer_applications",
+          "patterns": [
+              "What is the fee structure for Computer Applications?",
+              "How much does Electrical and Computer Applications cost per year?",
+              "Fees for Computer Applications?",
+              "Tell me the MCA course fees."
+          ],
+          "responses": [
+              "The fee structure for Computer Applications is approximately ₹1,30,000 per year. For more details, visit the official website or contact admissions at admissions@crescent.education."
+            ]
+        },
+        {
+            "tag": "fees_structure_mathematics_and_actuarial_science",
+          "patterns": [
+              "What is the fee structure for  Mathematics and Actuarial Science?",
+              "How much does Electrical and  Mathematics and Actuarial Science cost per year?",
+              "Fees for  Mathematics and Actuarial Science?",
+              "Tell me the M&AS course fees."
+          ],
+          "responses": [
+              "The fee strTucture for Mathematics and Actuarial Science is approximately ₹1,20,000 per year. For more details, visit the official website or contact admissions at admissions@crescent.education."
+            ]
+        },
+        {
+            "tag": "fees_structure_management_studies",
+          "patterns": [
+              "What is the fee structure for Management Studies?",
+              "How much does Electrical and Management Studies cost per year?",
+              "Fees for Management Studies?",
+              "Tell me the MBA course fees."
+          ],
+          "responses": [
+              "The fee strTucture for Mathematics and Actuarial Science is approximately ₹1,20,000 per year. For more details, visit the official website or contact admissions at admissions@crescent.education."
+            ]
+        },
+        {
+            "tag": "Contact_info",
+            "patterns": [
+            "What is the contact info of Crescent University?",
+            "How can I reach Crescent Institute?",
+            "Give me the phone number of Crescent University?",
+            "Where is Crescent University located?",
+            "Who should I contact for admissions at Crescent?"
+            ],
+            "responses": [
+            "B.S. Abdur Rahman Crescent Institute of Science and Technology is located at GST Road, Vandalur, Chennai – 600 048, Tamil Nadu, India. For admissions inquiries, the help desk can be reached at +91 – 95432 77888 for undergraduate programs, +91 – 99530 77999 for postgraduate programs, and via WhatsApp at +91 94990 01725. For general inquiries, contact +91 44 2275 1347 or +91 44 2275 9200, or email admissions@crescent.education. More information can be found on their official website: crescent.education."
+            ]
+        },
+        {
+            "tag": "Introduction",
+            "patterns": [
+            "what is your name?",
+            "who created you?",
+            "when did you born?"
+            ],
+            "responses": [
+            "You can call me CresBot! How can I assist you today?",
+            "I was created by Ashwanth saran JC",
+            "Born before 1 month."
+            ]
+        },
+        {
+            "tag": "visiting_hours",
+            "patterns": [
+            "What are the visiting hours of Crescent University?",
+            "When can I visit the university?",
+            "University visiting time?",
+            "What time is Crescent University open?",
+            "Can you tell me the working hours of the university?"
+            ],
+            "responses": [
+            "The visiting hours for B.S. Abdur Rahman Crescent Institute of Science and Technology are Monday to Saturday from 9:00 AM to 5:00 PM. The university is closed on Sundays and public holidays.",
+            "You can visit Crescent University between 9:00 AM and 5:00 PM from Monday to Saturday. It remains closed on Sundays and public holidays.",
+            "Crescent University is open for visitors from 9:00 AM to 5:00 PM, Monday to Saturday. It is closed on Sundays and public holidays.",
+            "The university operates from 9:00 AM to 5:00 PM on weekdays and Saturdays. Please note that it is closed on Sundays and public holidays."
+            ]
+        },
+        {
+            "tag": " Facilities & Campus Life",
+            "patterns": [
+            "What are the hostel facilities at Crescent University?",
+            "Does the university have a library?",
+            "Are there any sports facilities on campus?"
+            ],
+            "responses": [
+            "Crescent University offers well-facilitated hostels for both boys and girls with amenities like Wi-Fi, 24/7 security, study halls, mess facilities with vegetarian and non-vegetarian food, laundry services, and recreational areas. The hostels provide a comfortable and secure environment for students.",
+            "Yes, Crescent University has a well-equipped central library with a vast collection of books, research journals, e-books, and digital resources. The library provides a quiet study environment, computer access, and online databases to support students and faculty in their academic pursuits",
+            "Yes, Crescent University provides excellent sports facilities, including indoor and outdoor sports like basketball, football, cricket, badminton, volleyball, and a well-equipped gym. The university encourages students to participate in sports events and tournaments to promote fitness and teamwork."
+            ]
+        }
+    ]
+    }
+      
+    
+  
