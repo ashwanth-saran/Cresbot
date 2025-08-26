@@ -1,0 +1,788 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Poppins Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap">
+</head>
+<style>
+
+
+
+
+  #chat-circle {
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    background:linear-gradient(
+        90deg,
+        hsl(221, 100%, 44%) 0%,
+        hsl(221, 100%, 41%) 100%
+    );
+    width: 70px;
+    height: 70px;  
+    
+    color: white;
+    padding: 22px;
+    
+    box-shadow: 0px 3px 16px 0px rgb(255, 255, 255), 0 3px 1px -2px rgb(255, 255, 255), 0 1px 5px 0 rgb(255, 255, 255);
+    }
+
+    .btn#my-btn {
+        background: white;
+        padding-top: 13px;
+        padding-bottom: 12px;
+        border-radius: 45px;
+        padding-right: 40px;
+        padding-left: 40px;
+        color: #000000;
+    }
+    #chat-overlay {
+        background: rgba(255, 255, 255, 0.1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: none;
+    }
+    
+
+
+    .chat-box {
+    display: none;
+    background-image: url('') center/cover no-repeat; /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    position: fixed;
+    right: 30px;
+    bottom: 10px;
+    width: 400px;
+    
+    border-radius: 5px;
+    z-index: 100;
+    }
+    .chat-box-toggle {
+    float:right;
+    margin-right:15px;
+    cursor:pointer;
+    }
+    .chat-box-header {
+    background: #005ce6;
+    height:70px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px; 
+    color:white;
+    text-align:center;
+    font-size:25px;
+    padding-top:17px;
+    }
+    .chat-box-body {
+    position: relative;  
+    height:370px;  
+    height:auto;
+    border:1px solid #ffffff;  
+    overflow: hidden;
+    }
+    .chat-box-body:after {
+    content: "";
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height:100%;
+    position: absolute;
+    z-index: -1;   
+    }
+    #chat-input {
+    background: #f3f3f3;
+    width:100%; 
+    position:relative;
+    height:47px;  
+    padding-top:10px;
+    padding-right:50px;
+    padding-bottom:10px;
+    padding-left:15px;
+    border:none;
+    resize:none;
+    outline:none;
+    border:1px solid #ccc;
+    color:#000000;
+    border-top:none;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+    overflow:hidden;  
+    }
+    .chat-input > form {
+        margin-bottom: 0;
+    }
+    #chat-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #ccc;
+    }
+    #chat-input::-moz-placeholder { /* Firefox 19+ */
+    color: #ccc;
+    }
+    #chat-input:-ms-input-placeholder { /* IE 10+ */
+    color: #ccc;
+    }
+    #chat-input:-moz-placeholder { /* Firefox 18- */
+    color: #ccc;
+    }
+    .chat-submit {
+      position: relative;
+      display: inline-block;
+      margin-left: 323px;
+      top: -53px;
+      max-width: 70px;
+      max-height: 40px;
+      padding: 2px 8px;
+     
+      background-color: #ffffff; /* Darker green background */
+      color: white;
+      border: 1px solid #0049e6; /* Darker green border */
+      border-radius: 5px;
+      box-shadow:
+          0 5px #0049e6, /* Darker green shadow */
+          0 10px 15px rgba(92, 92, 92, 0.5); /* Black shadow */
+      transition: transform 0.3s ease;
+  }
+  
+  .chat-submit:hover {
+      transform: translateY(-3px);
+      box-shadow:
+          0 2px #0049e6, /* Darker green shadow */
+          0 5px 10px rgba(255, 255, 255, 0.5); /* Black shadow */
+      background-color: #ffffff; /* Darker background on hover */
+      border-color: rgb(0, 84, 209);
+  }
+  
+  /* Adjust any other properties as needed */
+  
+  
+  
+    .chat-logs {
+    padding:15px; 
+    height:370px;
+    overflow-y:scroll;
+    }
+
+    .chat-logs::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+        background-color: #F5F5F5;
+    }
+
+    .chat-logs::-webkit-scrollbar
+    {
+        width: 5px;  
+        background-color: #F5F5F5;
+    }
+
+    .chat-logs::-webkit-scrollbar-thumb
+    {
+        background-color: #313139;
+    }
+
+
+
+    @media only screen and (max-width: 500px) {
+    .chat-logs {
+            height:40vh;
+        }
+    }
+
+    .chat-msg.user > .msg-avatar img {
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    float:left;
+    width:15%;
+    }
+    .chat-msg.self > .msg-avatar img {
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    float:right;
+    width:15%;
+    }
+    .cm-msg-text {
+    background:#e9e9e9;
+    padding:10px 15px 10px 15px;  
+    color:#000000;
+    max-width:75%;
+    float:left;
+    margin-left:10px; 
+    position:relative;
+    margin-bottom:20px;
+    border-radius:30px;
+    }
+    .chat-msg {
+    clear:both;    
+    }
+    .chat-msg.self > .cm-msg-text {  
+    float:right;
+    margin-right:10px;
+    background: linear-gradient(
+      90deg,
+      hsl(221, 100%, 43%) 0%,
+      hsl(221, 100%, 41%) 100%
+  );
+    color:white;
+    }
+    .cm-msg-button>ul>li {
+    list-style:none;
+    float:left;
+    width:50%;
+    }
+    .cm-msg-button {
+        clear: both;
+        margin-bottom: 70px;
+    }
+    .new__centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    
+
+    .button3 {
+      color: white;
+      background: linear-gradient(to right, #005ce6, #005ce6);
+      border-radius: 8px;
+      transition: 0.2s ease-in-out;
+    }
+    .button3:hover {
+      border-radius: 30px;
+    }
+
+    .buttons1 {
+      display: flex;
+      flex-direction: column;
+    }
+
+
+
+    
+  
+</style>
+<body>
+  
+         {% if user.is_authenticated %}
+         
+         <style>
+          * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+          }
+          
+          .nav_container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+          }
+          
+          ul {
+            width:300px;
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+            padding: 5px;
+            font-size: 20px;
+          }
+          
+          li a {
+             text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+          }
+          ul li a:hover{
+            background: #fff;
+            color: black;
+            padding: 5px;
+            border-radius:5px;
+          }
+          
+          .logo {
+            display: flex;
+            align-items: center;
+          }
+          
+          .search {
+            padding: 10px;
+          }
+          
+          input {
+            padding: 5px;
+            outline: none;
+          }
+          
+          img {
+            width: auto;
+            height: 50px;
+          }
+          
+          .main_container {
+            height: 100vh;
+            color: #fff;
+            background: url('https://distance.crescent-institute.edu.in/img/home/about-us-content.jpg') no-repeat ;
+            background-size: cover; /* Adjust background size */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          
+          .content {
+            text-align: center;
+          }
+          
+          button {
+            height: 55px;
+            width: 170px;
+            border-radius: 10px;
+            border: 2px solid white;
+            font-size: 20px;
+            font-weight: 500;
+            margin:8px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+          }
+          h2{
+            margin:8px;
+          }
+          .chat-logo {
+            width: 40px; /* Adjust size as needed */
+            height: 40px;
+            margin-right: 10px;
+        }
+    
+        </style>
+        <div class="nav_container" style="background-color: white;">
+          <div class="logo">
+            <img src="https://crescent.education/wp-content/uploads/2025/02/COLLEGE-NAME.jpg"/>
+            
+           
+          </div>
+           <h2 style="color: rgb(0, 50, 189);"></h2>
+          <div class="menu">             
+             
+            
+          </div>
+         
+          
+        </div>
+        <section>
+          <div class="main_container">
+            <div class="content">
+              <h2>Welcome To My Cresbot</h2>
+             
+              <button><a href="{% url 'logout_view' %}" style="text-decoration: none;">Logout</a> </button>
+             
+            </div>
+            
+          </div>
+        </section>
+        
+        
+   
+        {% else %}
+        <style>
+          * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+          }
+          
+          .nav_container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+          }
+          
+          ul {
+            width:300px;
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+            padding: 5px;
+            font-size: 20px;
+          }
+          
+          li a {
+             text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+          }
+          ul li a:hover{
+            background: #fff;
+            color: black;
+            padding: 5px;
+            border-radius:5px;
+          }
+          
+          .logo {
+            display: flex;
+            align-items: center;
+          }
+          
+          .search {
+            padding: 10px;
+          }
+          
+          input {
+            padding: 5px;
+            outline: none;
+          }
+          
+          img {
+            width: auto;
+            height: 50px;
+          }
+          
+          .main_container {
+            height: 100vh;
+            color: #fff;
+            background: url('https://distance.crescent-institute.edu.in/img/home/about-us-content.jpg') no-repeat ;
+            background-size: cover; /* Adjust background size */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          
+          .content {
+            text-align: center;
+          }
+          
+          button {
+            height: 55px;
+            width: 170px;
+            border-radius: 10px;
+            border: 2px solid white;
+            font-size: 20px;
+            font-weight: 500;
+            margin:8px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+          }
+          h2{
+            margin:8px;
+          }
+          
+        </style>
+        <div class="nav_container" style="background-color: white;">
+          <div class="logo">
+            <img src="https://crescent.education/wp-content/uploads/2025/02/COLLEGE-NAME.jpg"/>
+            
+           
+          </div>
+          <div class="menu">
+            
+          </div>
+         
+          
+        </div>
+        <section>
+          <div class="main_container">
+            <div class="content">
+              <h2>Welcome To My Cresbot</h2>
+             
+              <button><a href="{% url 'login' %}" style="text-decoration: none;">Login</a> </button>
+            </div>
+            
+          </div>
+        </section>
+        {% endif %}
+     
+  </body>
+  
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          
+          
+              
+
+
+
+
+              {% if user.is_authenticated %}
+                
+              
+              
+              
+              <a href="#" class="scrollup" id="scroll-up">
+                <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+                </a>
+                <div id="chat-circle" class="btn btn-raised">
+                <div id="chat-overlay"></div>
+                    <i class="material-icons">chat</i>
+                </div>
+
+                
+                <div class="chat-box">
+                  <div class="chat-box-header">
+                    <img src="https://static.wixstatic.com/media/dc221f_9035d111788246d1ad295cff2b412bb7~mv2.png/v1/fit/w_2500,h_1330,al_c/dc221f_9035d111788246d1ad295cff2b412bb7~mv2.png" class="chat-logo">  
+                    CRESBOT
+                    <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+                </div>
+                  <div class="chat-box-body">
+                    <div class="chat-box-overlay">   
+                    </div>
+                    <div class="chat-logs" style="background-image: url(); background-color: white; background-position: center;background-repeat: no-repeat; background-size: cover;">
+                    </div>
+                  </div>
+                  <div class="chat-input" style="background-color: rgb(255, 255, 255);">      
+                    <form>
+                      <input type="text" id="chat-input"  placeholder="Send a message..."/>
+                      <button type="submit" class="chat-submit"  id="chat-submit"><i  style="color: rgb(0, 99, 230); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">send</i></button>
+                        
+                
+                    </form>      
+                  </div>
+                </div>
+                </div>
+                <script>
+                  $(function() {
+                  var INDEX = 0; 
+                  
+                  $("#chat-submit").click(function(e) {
+                      e.preventDefault();
+                      var msg = $("#chat-input").val(); 
+                      if(msg.trim() == ''){
+                      return false;
+                      }
+                      generate_message(msg, 'self');
+                      $.ajax({
+                      type: 'POST',
+                      url :"chatbot/",
+                      data: { question: msg },
+                      dataType: 'json',
+                      success: function(response){
+                          console.log(response); // Log the entire response object
+                          var modelResponse = response.response;
+                          generate_message(modelResponse, 'user' ); 
+                      },
+                      error: function(err) {
+                      console.error('Error communicating with the model:',err);
+                      }
+                      });
+                  });
+                  
+                  function generate_message(msg, type) {
+                      INDEX++;
+                      var str="";
+                      str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
+                      str += "          <span class=\"msg-avatar\">";
+                      
+                      str += "          <\/span>";
+                      str += "          <div class=\"cm-msg-text\">";
+                      str += msg;
+                      str += "          <\/div>";
+                      str += "        <\/div>";
+                      $(".chat-logs").append(str);
+                      $("#cm-msg-"+INDEX).hide().fadeIn(300);
+                      if(type == 'self'){
+                      $("#chat-input").val(''); 
+                      }    
+                      $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);    
+                  }  
+                  
+                  function generate_button_message(msg, buttons){
+                      INDEX++;
+                      var btn_obj = buttons.map(function(button) {
+                      return  "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\""+button.value+"\">"+button.name+"<\/a><\/li>";
+                      }).join('');
+                      var str="";
+                      str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg user\">";
+                      str += "          <span class=\"msg-avatar\">";
+                      str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
+                      str += "          <\/span>";
+                      str += "          <div class=\"cm-msg-text\">";
+                      str += msg;
+                      str += "          <\/div>";
+                      str += "          <div class=\"cm-msg-button\">";
+                      str += "            <ul>";   
+                      str += btn_obj;
+                      str += "            <\/ul>";
+                      str += "          <\/div>";
+                      str += "        <\/div>";
+                      $(".chat-logs").append(str);
+                      $("#cm-msg-"+INDEX).hide().fadeIn(300);   
+                      $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);
+                      $("#chat-input").attr("disabled", true);
+                  }
+                  
+                  $(document).delegate(".chat-btn", "click", function() {
+                      var value = $(this).attr("chat-value");
+                      var name = $(this).html();
+                      $("#chat-input").attr("disabled", false);
+                      generate_message(name, 'self');
+                  })
+                  
+                  $("#chat-circle").click(function() {    
+                      $("#chat-circle").toggle('scale');
+                      $(".chat-box").toggle('scale');
+                  })
+                  
+                  $(".chat-box-toggle").click(function() {
+                      $("#chat-circle").toggle('scale');
+                      $(".chat-box").toggle('scale');
+                  })
+                  
+                  })
+              </script>
+                
+                
+            
+                  
+              {% else %}
+                  
+                 
+                </p>
+              {% endif %}
+            
+
+    <script>
+      "use strict";
+  // Open close dropdown on click
+  document.querySelectorAll("li.dropdown").forEach(function(dropdown) {
+    dropdown.addEventListener("click", function() {
+      if (this.classList.contains("open")) {
+        this.querySelector(".dropdown-menu").style.display = "none";
+        this.classList.remove("open");
+      } else {
+        this.querySelector(".dropdown-menu").style.display = "block";
+        this.classList.toggle("open");
+      }
+    });
+  });
+  // Close dropdown on mouseleave
+  document.querySelectorAll("li.dropdown").forEach(function(dropdown) {
+    dropdown.addEventListener("mouseleave", function() {
+      this.querySelector(".dropdown-menu").style.display = "none";
+      this.classList.remove("open");
+    });
+  });
+  // Navbar toggle
+  document.querySelector(".navbar-toggle").addEventListener("click", function() {
+    document.querySelector(".navbar-collapse").classList.toggle("collapse");
+    document.querySelector(".navbar-collapse").style.display = (document.querySelector(".navbar-collapse").style.display === "none") ? "block" : "none";
+  });
+  // Navbar colors
+  document.querySelectorAll("#nav-colors > .btn").forEach(function(btn) {
+    btn.addEventListener("click", function() {
+   
+    });
+  });
+  
+  
+  </script>
+  
+  
+
+    
+    
+
+<script src="assets/js/main.js" type="module"></script>
+
+{% block content %}
+{% endblock content %}
+</body>
+
+</html>
+  
+
